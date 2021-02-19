@@ -7,3 +7,10 @@ delete_prefix:
 version_node_npm:
 	@echo "node ver.: `node -v`"
 	@echo "npm ver.:  `npm -v`"
+
+# make git m="your message"
+git:									## Git add, commit and push all in one command
+	git add .
+	git commit -m "$m"
+	#git push
+	git status
