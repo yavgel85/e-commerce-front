@@ -15,9 +15,9 @@
             </p>
             <hr>
 
-            <span class="tag is-rounded is-medium is-dark" v-if="!product.in_stock">
-              Out of stock
-            </span>
+<!--            <span class="tag is-rounded is-medium is-dark" v-if="!product.in_stock">-->
+<!--              Out of stock-->
+<!--            </span>-->
 
             <span class="tag is-rounded is-medium">
               {{ product.price }}
