@@ -12,5 +12,5 @@ version_node_npm:
 git:									## Git add, commit and push all in one command
 	git add .
 	git commit -m "$m"
-	#git push
+	git push
 	git status
