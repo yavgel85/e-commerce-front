@@ -20,8 +20,8 @@ export const actions = {
 
     commit('SET_CATEGORIES', response.data)
 
-    /*if (this.$auth.loggedIn) {
+    if (this.$auth.loggedIn) {
       await dispatch('cart/getCart')
-    }*/
+    }
   }
 }
