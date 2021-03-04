@@ -13,7 +13,7 @@
           <p class="has-text-weight-bold">Subtotal</p>
         </td>
         <td>
-<!--          {{ subtotal }}-->
+          {{ subtotal }}
         </td>
         <td></td>
       </tr>
@@ -30,7 +30,7 @@
     computed: {
       ...mapGetters({
         products: 'cart/products',
-        // subtotal: 'cart/subtotal'
+        subtotal: 'cart/subtotal'
       })
     },
 
