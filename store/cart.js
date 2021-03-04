@@ -99,13 +99,13 @@ export const actions = {
     dispatch('getCart')
   },
 
-  // async store ({ dispatch }, products) {
-  //   let response = await this.$axios.$post('cart', {
-  //     products
-  //   })
-  //
-  //   dispatch('getCart')
-  // },
+  async store ({ dispatch }, products) {
+    let response = await this.$axios.$post('cart', {
+      products
+    })
+
+    dispatch('getCart')
+  },
 
   // async setShipping ({ commit }, shipping) {
   //   commit('SET_SHIPPING', shipping)
