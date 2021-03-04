@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-brand">
         <nuxt-link :to="{ name: 'index' }" class="navbar-item">
-          cart
+          Cart
         </nuxt-link>
         <div class="navbar-burger burger" data-target="nav">
           <span></span>

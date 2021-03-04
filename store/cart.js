@@ -85,19 +85,19 @@ export const actions = {
     return response
   },
 
-  // async destroy ({ dispatch }, productId) {
-  //   let response = await this.$axios.$delete(`cart/${productId}`)
-  //
-  //   dispatch('getCart')
-  // },
+  async destroy ({ dispatch }, productId) {
+    let response = await this.$axios.$delete(`cart/${productId}`)
 
-  // async update ({ dispatch }, { productId, quantity }) {
-  //   let response = await this.$axios.$patch(`cart/${productId}`, {
-  //     quantity
-  //   })
-  //
-  //   dispatch('getCart')
-  // },
+    dispatch('getCart')
+  },
+
+  async update ({ dispatch }, { productId, quantity }) {
+    let response = await this.$axios.$patch(`cart/${productId}`, {
+      quantity
+    })
+
+    dispatch('getCart')
+  },
 
   // async store ({ dispatch }, products) {
   //   let response = await this.$axios.$post('cart', {
