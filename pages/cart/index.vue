@@ -41,7 +41,8 @@
     computed: {
       ...mapGetters({
         empty: 'cart/empty',
-        products: 'cart/products'
+        products: 'cart/products',
+        changed: 'cart/changed',
       })
     }
   }

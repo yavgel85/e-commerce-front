@@ -30,10 +30,10 @@ export const getters = {
     return state.total
   },
 
-  // changed (state) {
-  //   return state.changed
-  // },
-  //
+  changed (state) {
+    return state.changed
+  },
+
   // shipping (state) {
   //   return state.shipping
   // }
@@ -56,10 +56,10 @@ export const mutations = {
     state.total = total
   },
 
-  // SET_CHANGED (state, changed) {
-  //   state.changed = changed
-  // },
-  //
+  SET_CHANGED (state, changed) {
+    state.changed = changed
+  },
+
   // SET_SHIPPING (state, shipping) {
   //   state.shipping = shipping
   // }
@@ -80,7 +80,7 @@ export const actions = {
     commit('SET_EMPTY', response.meta.empty)
     commit('SET_SUBTOTAL', response.meta.subtotal)
     commit('SET_TOTAL', response.meta.total)
-    // commit('SET_CHANGED', response.meta.changed)
+    commit('SET_CHANGED', response.meta.changed)
 
     return response
   },
