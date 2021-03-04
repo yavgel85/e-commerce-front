@@ -1,7 +1,8 @@
 <template>
   <tr>
-    <td width="120">
-      <img src="http://via.placeholder.com/60x60" alt="">
+    <td width="180">
+<!--      <img src="http://via.placeholder.com/60x60" alt="">-->
+      <img class="image is-64x64" src="https://images.unsplash.com/photo-1462917882517-e150004895fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="">
     </td>
     <td>
       {{ product.product.name }} / {{ product.type }} {{ product.name }}
