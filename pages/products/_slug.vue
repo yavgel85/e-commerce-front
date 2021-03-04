@@ -3,7 +3,8 @@
     <div class="container is-fluid">
       <div class="columns">
         <div class="column is-half">
-          <img src="http://via.placeholder.com/620x620" alt="Product name">
+<!--          <img src="http://via.placeholder.com/620x620" alt="Product name">-->
+          <img src="https://images.unsplash.com/photo-1522120573867-e574959f84c8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80" alt="Product name">
         </div>
         <div class="column is-half">
           <section class="section">
