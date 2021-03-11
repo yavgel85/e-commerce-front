@@ -54,7 +54,7 @@
 </template>
 
 <script>
-  import CountryDropdown from '@/components/form/CountryDropdown'
+import CountryDropdown from '@/components/form/CountryDropdown'
 
   export default {
     data () {
@@ -70,16 +70,16 @@
       }
     },
 
-    components: {
-      CountryDropdown
-    },
+  components: {
+    CountryDropdown
+  },
 
-    methods: {
-      async store () {
-        let response = await this.$axios.$post('addresses', this.form)
+  methods: {
+    async store () {
+      let response = await this.$axios.$post('addresses', this.form)
 
-        this.$emit('created', response.data)
-      }
+      this.$emit('created', response.data)
     }
   }
+}
 </script>

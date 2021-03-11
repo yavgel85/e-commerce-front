@@ -43,65 +43,66 @@
 </template>
 
 <script>
-  import ShippingAddressSelector from './ShippingAddressSelector'
-  import ShippingAddressCreator from './ShippingAddressCreator'
+import ShippingAddressSelector from './ShippingAddressSelector'
+import ShippingAddressCreator from './ShippingAddressCreator'
 
-  export default {
-    data () {
-      return {
-        selecting: false,
-        creating: false,
-        localAddresses: this.addresses,
-        selectedAddress: null
-      }
+export default {
+  data () {
+    return {
+      selecting: false,
+      creating: false,
+      localAddresses: this.addresses,
+      selectedAddress: null
+    }
+  },
+
+  watch: {
+    selectedAddress (address) {
+      this.$emit('input', address.id)
+    }
+  },
+
+  components: {
+    ShippingAddressSelector,
+    ShippingAddressCreator
+  },
+
+  props: {
+    addresses: {
+      required: true,
+      type: Array
+    }
+  },
+
+  computed: {
+    defaultAddress () {
+      return this.localAddresses.find(a => a.default === 1)
+      //return this.localAddresses.find(a => a.default === true) // for some DB
+    }
+  },
+
+  methods: {
+    addressSelected (address) {
+      this.switchAddress(address)
+      this.selecting = false
     },
 
-    watch: {
-      /*selectedAddress (address) {
-        this.$emit('input', address.id)
-      }*/
+    switchAddress (address) {
+      this.selectedAddress = address
     },
 
-    components: {
-      ShippingAddressSelector,
-      ShippingAddressCreator
-    },
+    created (address) {
+      this.localAddresses.push(address)
+      this.creating = false
 
-    props: {
-      addresses: {
-        required: true,
-        type: Array
-      }
-    },
+      this.switchAddress(address)
+    }
+  },
 
-    computed: {
-      defaultAddress () {
-        return this.localAddresses.find(a => a.default === true)
-      }
-    },
-
-    methods: {
-      addressSelected (address) {
-        this.switchAddress(address)
-        this.selecting = false
-      },
-
-      switchAddress (address) {
-        this.selectedAddress = address
-      },
-
-      created (address) {
-        this.localAddresses.push(address)
-        this.creating = false
-
-        this.switchAddress(address)
-      }
-    },
-
-    created () {
-      if (this.addresses.length) {
-        this.switchAddress(this.defaultAddress)
-      }
+  created () {
+    if (this.addresses.length) {
+      this.switchAddress(this.defaultAddress)
     }
   }
+}
 </script>
