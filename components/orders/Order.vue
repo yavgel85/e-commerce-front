@@ -8,8 +8,7 @@
       </td>
       <td>
         <div v-for="variation in products" :key="variation.id">
-          {{variation}}
-<!--          <nuxt-link
+          <nuxt-link
             :to="{
               name: 'products-slug',
               params: {
@@ -18,7 +17,7 @@
             }"
           >
             {{ variation.product.name }} ({{ variation.name }}) - {{ variation.type }}
-          </nuxt-link>-->
+          </nuxt-link>
         </div>
         <template v-if="moreProducts > 0">
           and {{ moreProducts }} more
