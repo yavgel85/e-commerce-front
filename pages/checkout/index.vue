@@ -196,11 +196,11 @@ export default {
 
   async asyncData ({ app }) {
     let addresses = await app.$axios.$get('addresses')
-    //let paymentMethods = await app.$axios.$get('payment-methods')
+    let paymentMethods = await app.$axios.$get('payment-methods')
 
     return {
       addresses: addresses.data,
-      //paymentMethods: paymentMethods.data
+      paymentMethods: paymentMethods.data
     }
   }
 }

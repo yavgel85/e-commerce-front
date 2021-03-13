@@ -72,7 +72,8 @@
 
     computed: {
       defaultPaymentMethod () {
-        return this.localPaymentMethods.find(a => a.default === true)
+        return this.localPaymentMethods.find(a => a.default === 1)
+        //return this.localPaymentMethods.find(a => a.default === true) // for some DB
       }
     },
 
