@@ -48,15 +48,31 @@
     },
 
     mounted () {
-      const stripe = Stripe('pk_test_kjzrYyFONSIQLpg57n1R7QxZ')
+      const stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx', { locale: 'auto'})
+      //const stripe = Stripe('pk_test_kjzrYyFONSIQLpg57n1R7QxZ')
 
       this.stripe = stripe
 
       this.card = this.stripe.elements().create('card', {
         style: {
           base: {
-            fontSize: '16px'
-          }
+            iconColor: '#414347',
+            color: '#240a0a',
+            fontWeight: '500',
+            fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
+            fontSize: '16px',
+            fontSmoothing: 'antialiased',
+            ':-webkit-autofill': {
+              color: '#fce883',
+            },
+            '::placeholder': {
+              color: '#3273dc',
+            },
+          },
+          invalid: {
+            iconColor: '#ee55bf',
+            color: '#94407b',
+          },
         }
       })
 
