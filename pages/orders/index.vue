@@ -37,7 +37,7 @@
     },
 
     middleware: [
-      //'redirectIfGuest'
+      'redirectIfGuest'
     ],
 
     components: {

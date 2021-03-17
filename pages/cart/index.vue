@@ -35,7 +35,7 @@
     },
 
     middleware: [
-      //'redirectIfGuest'
+      'redirectIfGuest'
     ],
 
     computed: {
